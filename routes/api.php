@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
+use Illuminate\Support\Facades\Route;
+use App\News;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/getuser/','UserController@getUser');
+Route::post('/adduser/','UserController@addUser');
+Route::patch('/updateuser/','UserController@updateUser');
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
