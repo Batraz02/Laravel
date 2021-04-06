@@ -17,4 +17,5 @@ use App\News;
 Route::get('/getuser/','UserController@getUser');
 Route::post('/adduser/','UserController@addUser');
 Route::patch('/updateuser/','UserController@updateUser');
-
+Route::get('/registruser/','UserController@registerUser');
+Route::get('/singuser/','UserController@singUser');
